@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main-css.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Love Story</title> 
+  </head>
+  <body id="body">
+    <div class="preload">
+      <p>Loading  . . .</p>
+    </div>
+    <div class="open"> 
+      <div> 
+        <div class="lope" onclick="ilang()"> 
+          <i class="love material-icons-sharp"> favorite </i> 
+        </div> 
+        <h3>please click on this💘</h3> 
+      </div> 
+    </div>
+    <div id="bg"></div> <img src="" alt="" id="fotoku" />
+
+    <h2 id="hai">Hey MAROUA✨</h2>
+    <h3 id="hia">please scroll😚</h3>
+
+    <div id="slider">
+
+      <p>hey👋</p>
+      <p>MAROUA✨</p>
+
+      <p>click on this i've something for you<span>🎁</span></p>
+
+    </div>
+
+    <script>
+
+      musik = "";
+      foto = "";
+      background = "";
+      noWhatsapp = "";
+
+      async function popUp() {
+
+        await swalo.fire({ title: "", imageUrl: "" });
+
+        kirimPesan();
+
+      }
+      $(window).on("load", function () {$(".preload").fadeOut("slow");}); 
+      var audio = new Audio(musik);
+      audio.autoplay = true;
+      audio.loop = true;
+      bg.style = 'background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("' + background + '");'; 
+      fotoku.src = foto; 
+      var swalo = Swal.mixin({ allowOutsideClick: false });
+      async function kirimPesan() {
+    var { value: pesan } = await Swal.fire({
+      title: "I have a question for you,\nwhat is my favorite meal?",
+      input: "text",
+      confirmButtonText: "Submit"
+    });
+
+    if (pesan) {
+        await Swal.fire("Thank you for being the most valuable person in my life 💕 I have a simple gift for you");
+        // Directly redirect to the YouTube video
+        location.assign("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+    } else {
+        await Swal.fire({
+            confirmButtonText: "Why?",
+            title: "Why not? :)"
+        });
+        kirimPesan(); // Prompt the question again if no input
+    }
+}
+
+// Add event listener to trigger the popup
+document.querySelector("span").addEventListener("click", function () {
+    kirimPesan();
+});
+
+// This might be used to trigger something else, make sure it's connected to an appropriate element
+var open = document.querySelector(".open");
+      function ilang() { 
+        audio.play(); open.style = "transition: 1.5s ease-out all; opacity: 0; transform: scale(100) translateY(-20px); filter: brightness(0);"; setTimeout(function () { open.style = "display:none;"; }, 1500); setTimeout(function () { fotoku.style = "opacity: 1; transition: 1s all ease; transform: translateY(0px) scale(1);"; }, 500); setTimeout(function () { hai.style = "opacity: 1; transition: 1s all ease; transform: translateY(0px);"; }, 1400); setTimeout(function () { hia.style = "opacity: 1; transition: 1s all ease; transform: translateY(0px);"; }, 1800); setTimeout(function () { slider.style = "opacity: 1; transition: 1s all ease; transform: translateY(0px) scale(1);"; }, 2200); 
+      }
+    </script> 
+    <div class="copyright-content">
+      <p>© Copyright 2024  |  All Rights Reserved by <a href="https://dextertaha.github.io/Taha-Taidi-Laamiri-portfolio/" target="_blank">Taha TAIDI LAAMIRI</a></p>
+  </div>
+  </body> 
+</html>
